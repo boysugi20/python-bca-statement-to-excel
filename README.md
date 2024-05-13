@@ -17,8 +17,8 @@ This Python script is designed to process bank statements in PDF format, extract
   pipenv install
 ```
 3. Create a folder named ```statements```
-3. Place your bank statement PDF files in the ```statements``` folder
-4. Run the script ```python main.py```
+4. Place your bank statement PDF files in the ```statements``` folder
+5. Run the script ```python main.py```
 
 ## Additional Notes
 The script assumes the contents of ```statements``` folder are e-statements downloaded from myBCA application
