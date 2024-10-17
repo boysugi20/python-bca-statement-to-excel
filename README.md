@@ -22,3 +22,6 @@ This Python script is designed to process bank statements in PDF format, extract
 
 ## Additional Notes
 The script assumes the contents of ```statements``` folder are e-statements downloaded from myBCA application
+
+## Output Example
+![Screenshot 2024-10-18 003737](https://github.com/user-attachments/assets/f39e8c65-d919-47fd-a9bd-ec1c2a7d85ed)
