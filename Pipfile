@@ -6,9 +6,9 @@ name = "pypi"
 [packages]
 pandas = "*"
 pypdf = "*"
-tabula-py = "*"
 openpyxl = "*"
 tqdm = "*"
+tabula-py = "*"
 
 [dev-packages]
 
