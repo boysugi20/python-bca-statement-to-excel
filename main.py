@@ -211,13 +211,14 @@ for filename in pbar:
     if os.path.isfile(file_path):
 
         # Get header information
-        header_dataframe = read_pdf(file_path, area = (95, 324, 155, 570), pages='1', pandas_options={'header': None, 'dtype': str}, force_subprocess=True)[0]
+        header_dataframe = read_pdf(file_path, area = (70, 315, 141, 548), pages='1', pandas_options={'header': None, 'dtype': str}, force_subprocess=True)[0]
         periode = header_dataframe.loc[header_dataframe[0] == 'PERIODE', 2].values[0]
         periode = ' '.join(reversed(periode.split()))
         no_rekening = header_dataframe.loc[header_dataframe[0] == 'NO. REKENING', 2].values[0]
         output_filename = f'{no_rekening}.xlsx'
 
-        dataframes = read_pdf(file_path, area = (251, 25, 805, 577), columns=[86, 184, 300, 340, 467], pages='all', pandas_options={'header': None, 'dtype': str}, force_subprocess=True)
+        # y1, x1, y2, x2
+        dataframes = read_pdf(file_path, area = (231, 25, 797, 577), columns=[86, 184, 300, 340, 467], pages='all', pandas_options={'header': None, 'dtype': str}, force_subprocess=True)
 
         init_balance = dataframes[0].loc[dataframes[0][1] == 'SALDO AWAL', 5].values[0]
         init_balance = float(init_balance.replace(',', ''))
